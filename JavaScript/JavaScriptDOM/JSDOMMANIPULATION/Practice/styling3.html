@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get computed style demo</title>
+    <style type="text/css">
+        #intro{
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 200;
+        }
+    </style>
+</head>
+<body>
+    <p id="intro" style="color:red; font-size:20px;">This is a heading</p>
+    <p>this is another heading</p>
+<script>
+    var st=document.getElementById("intro");
+    var elem=window.getComputedStyle(st);
+    alert(elem.getPropertyValue("color"));
+    alert(elem.getPropertyValue("font-size"));
+    alert(elem.getPropertyValue("font-weight"));
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+        // window.screen object contains information about the user screen such as resolution 
+        //width and height of the screen ,color depth, pixel depth etc.
+        //getting width and height of the screen..
+        function getResolution(){
+            alert("your screen is"+screen.width+"x"+screen.height);
+            //getting avilable with and height..
+            //it is equal to screen actual width and height minus width and height 
+            //of interface features like taskbar in windows etc.
+            document.write("Avilable screen width and height excluding taskbar is : ");
+            document.write("<br>width "+screen.availWidth+" height"+screen.availHeight);
+        }
+//Note: Since window object at the top of the scope chain so properties of window.screen object
+//can be accessed without specifying the window prefix line widndow.screen.width can be
+//written as screen.width
+        </script>
+        <button type="button" onclick="getResolution()">Get Screen Resolution</button>
+    </body>
+</html>

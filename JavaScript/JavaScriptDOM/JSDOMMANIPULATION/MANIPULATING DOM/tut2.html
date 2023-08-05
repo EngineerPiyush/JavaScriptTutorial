@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div id="main">
+            <h1 id="title">Hello World !</h1>
+            <p id="hint">This is a simple paragraph</p>
+        </div>
+        <script>
+            //getting orsetting html content to DOM
+            var contents=document.getElementById("main").innerHTML;
+            alert(contents);
+            //setting innner HTML content
+            var mainDiv=document.getElementById("main");
+            mainDiv.innerHTML="<p>This is <em>newly inserted</em> paragraph<p>";
+//but the problem is innerHTML property replace all existing content of an html..
+        </script>
+    </body>
+</html>

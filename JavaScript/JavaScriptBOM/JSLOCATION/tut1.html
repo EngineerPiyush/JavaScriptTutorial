@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            //the location propperty of a window window.location is a refrence to a location object
+            // it represents the current url of the document being displayed in that window.
+            //since window object is at the top of scope chain so properties window location 
+            //can be assessed without window prefix.
+            //Getting the current url of web page...
+            function getURL(){
+                alert("The URL of this page is : "+window.location.href);
+            }
+        </script>
+        <button onclick="getURL()">Get Page URL</button>
+    </body>
+</html>

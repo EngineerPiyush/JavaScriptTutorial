@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            //The window object (alert is an object method) represents a window containing a DOM document.
+            //A window can be main window , aframe set or indivisual frame or even a
+            //new window created with javascript .
+
+            //calculating width and height of a window using innerWidth and innerHeight property
+            //it tells in pixels including vertical and horizontal scrollbar.
+                 function windowSize(){
+                     var w=window.innerWidth;
+                     var h=window.innerHeight;
+                      alert("Width:"+w+" "+"Height" +h);
+                      document.write("below are the size of widow excluding scrollbars"); 
+                      document.write("<br>"+document.documentElement.clientWidth+"<br>");
+                      document.write(document.documentElement.clientHeight);          
+                 }
+                 //However if you want to find out the width and height of the window excluding the 
+                 //scrollbars you can use clientWidth and clientHeight property 
+        </Script>
+         <button type="button" onclick="windowSize();">Get Window Size </button>
+    </body>
+</html>

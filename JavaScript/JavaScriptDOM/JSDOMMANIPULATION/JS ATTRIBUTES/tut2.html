@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .click-btn{
+                color:red;
+            }
+        </style>
+    </head>
+    <body>
+        <button type="button" id="myBtn">click me</button>
+        <p><a href="#" id="mylink">Google</a></p>
+        <script>
+            //setting attributes on an element using setAttribute() method.
+            var btn=document.getElementById("myBtn");
+            btn.setAttribute("class","click-btn");
+            btn.setAttribute("disabled","");
+            //we can also use setAttribute method to update or change the value of an existing method.
+            var link=document.getElementById("mylink");
+            link.setAttribute("href","https://www.google.com");
+        </script>
+    </body>
+</html>

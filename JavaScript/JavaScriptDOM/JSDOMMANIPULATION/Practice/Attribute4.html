@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1 class="democlass" id="h">Hi</h1>
+        <p>the value of h1 heading attribute is :</p>
+        <p id="demo"></p>
+        <script>
+            const ele=document.getElementById("h");
+            //The getAttribute() method returns the value of an attribute.
+            //But----The getAttributeNode() method returns an Attr object, and you must use the Attr value property to get the value.
+            const attr=ele.getAttributeNode("class");
+            document.getElementById("demo").innerHTML=attr.value;
+        </script>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div id="main">
+            <h1 id="title">My Heading</h1>
+            <p id="hint"><span>This is some Text</span></p>
+            <p>this is another paragraph</p>
+        </div>
+        <script>
+            //we can use chilNodes property to access all child nodes of a given element where the first
+            //chuild node asign to zero.
+            var main=document.getElementById("main");
+           if(main.hasChildNodes())
+           {
+            var nodes=main.childNodes;
+            for(var i=0;i<nodes.length;i++)
+            {
+                alert(nodes[i].nodeName);
+            }
+           }
+           //it also returns all child including non element nodes(#text ,#comment etc).
+            </script>
+    </body>
+</html>

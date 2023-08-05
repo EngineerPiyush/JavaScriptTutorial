@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            //inspect the output page and run the method from console..
+class RailwayForm{
+    constructor(givenname,trainNo,address){
+        this.name=givenname;
+        this.trainNo=trainNo;
+        this.address=address;
+    }
+    preview()
+    {
+        alert(this.name +" :your tarin no is "+this.trainNo+" :your address is "+this.address);
+    }
+    cancel()
+    {
+        alert(this.name +" :your from is cancelled for tain number "+this.trainNo);
+        trainNo=0;
+    }
+}
+ piyushForm=new RailwayForm("piyush",15050,"Lucknow ,uttar pradesh, hazratganj--46570");
+ saurabhForm=new RailwayForm("saurabh",30021,"faizabad ,uttar pradesh , naka-224001"); 
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p>this is one more paragraph of text</p>
+        <ul>
+            <li>html</li>
+            <li class="design">css</li>
+            <li class="2 design">javascript</li>
+            <li>pineapple</li>
+        </ul>
+        <script>
+            // 5: selecting elements by css selectors
+            var match=document.querySelectorAll("ul li");
+            document.write("number of selected elements :"+match.length+"<br>");
+            match=document.querySelectorAll("ul li.design");
+            //document.write("number of selected elements "+match.lenght);
+            match[1].style.textDecoration="line-through";
+        </script>
+    </body>
+</html>

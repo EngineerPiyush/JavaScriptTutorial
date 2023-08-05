@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Javascript Events -->
+
+    <!-- mouse events -->
+    <!-- onclick || onClick || ONCLICK  -->
+    <button type="button" onclick="alert('You have clicked a button!');">Click Me</button>
+    <a href="#" onclick="alert('You have clicked a link!');">Click Me</a>
+    <!-- onContextMenu -->
+    <button type="button" oncontextmenu="alert('You have right-clicked a button!');">Right Click on Me</button>
+<a href="#" oncontextmenu="alert('You have right-clicked a link!');">Right Click on Me</a>
+    <!-- onmouseover -->
+    <button type="button" onmouseover="alert('You have placed mouse pointer over a button!');">Place Mouse Over Me</button>
+<a href="#" onmouseover="alert('You have placed mouse pointer over a link!');">Place Mouse Over Me</a>
+    <!-- onmouseout -->
+    <button type="button" onmouseout="alert('You have moved out of the button!');">Place Mouse Inside Me and Move Out</button>
+<a href="#" onmouseout="alert('You have moved out of the link!');">Place Mouse Inside Me and Move Out</a>
+   
+   <!-- keyboards Events -->
+   <!-- onkeydown -->
+   <input type="text" onkeydown="alert('You have pressed a key inside text input!')">
+<textarea onkeydown="alert('You have pressed a key inside textarea!')"></textarea>
+    <!-- onkeyup -->
+<input type="text" onkeyup="alert('You have released a key inside text input!')">
+<textarea onkeyup="alert('You have released a key inside textarea!')"></textarea>
+
+    <!--Form Events  -->
+    <input type="text" onfocus="highlightInput(this)">
+    <button type="button">Button</button>
+    <!-- onblur -->
+    <input type="text" onblur="alert('Text input loses focus!')">
+    <button type="button">Submit</button>
+    <!-- onchange -->
+    <select onchange="alert('You have changed the selection!');">
+    <option>Select</option>
+    <option>Male</option>
+    <option>Female</option>
+</select>
+<!-- onsubmit -->
+<form action="action.php" method="post" onsubmit="alert('Form data will be submitted to the server!');">
+    <label>First Name:</label>
+    <input type="text" name="first-name" required>
+    <input type="submit" value="Submit">
+</form>
+
+<!-- Document/Window Events -->
+    <!-- onload -->
+    <!-- The load event occurs when a web page has finished loading in the web browser. -->
+    <body onload="window.alert('Page is loaded successfully!');">
+    <h1>This is a heading</h1>
+    <p>This is paragraph of text.</p>
+</body>
+    <!-- onunload -->
+    <!-- The unload event occurs when a user leaves the current web page. -->
+    <body onunload="alert('Are you sure you want to leave this page?');">
+    <h1>This is a heading</h1>
+    <p>This is paragraph of text.</p>
+</body>
+    <!-- onresize -->
+    <p id="result">hi</p>
+   <script>
+    //    onfocus
+    function highlightInput(elm){
+        elm.style.background = "yellow";
+    }   
+    // onresize
+     function displayWindowSize() {
+        var w = window.outerWidth;
+        var h = window.outerHeight;
+        var txt = "Window size: width=" + w + ", height=" + h;
+        document.getElementById("result").innerHTML = txt;
+    }
+    window.onresize = displayWindowSize;
+    </script>
+</body>
+</html>

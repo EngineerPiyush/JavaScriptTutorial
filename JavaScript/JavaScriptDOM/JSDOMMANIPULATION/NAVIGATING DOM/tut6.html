@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div id="main">
+            <h1 id="title">My Heading</h1>
+            <p id="hint"><span>This is some Text</span></p>
+            <hr>
+        </div>
+        <script>
+            //we can use previousSibling and nextSibling property to access previous and next node.
+            var title=document.getElementById("title");
+            alert(title.previousSibling.nodeName);
+            var hint =document.getElementById("hint");
+            alert(hint.nextSibling.nodeName);
+        </script>
+    </body>
+</html>

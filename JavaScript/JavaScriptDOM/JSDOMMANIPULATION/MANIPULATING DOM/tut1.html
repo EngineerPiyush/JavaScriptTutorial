@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div id="main">
+                <h1 id="title">Hello Kareja</h1>
+                <p id="hint">this is simple paragraph</p>
+                </div>
+        <script>
+            //adding new element to DOM so i will first create it using document.createElement() then add.
+            var newDiv=document.createElement("div");
+            var newContent=document.createTextNode("hii, kareja kaisn badu");
+            //in above line i ahve creted a text node("means text to add").
+            newDiv.appendChild(newContent);//adding the text node to newly created div.
+            var currentDiv=document.getElementById("main");
+//Note: the appendChild() method adds the new element at tthe end of any other chilrdren of a specified parent node.
+            document.body.appendChild(newDiv,currentDiv);//comment the below line to see this line effect.
+//However, if you want to add the new element at beginning use the insertBefore() method.
+            document.body.insertBefore(newDiv,currentDiv);//comment this to see above line effect
+</script>
+    </body>
+</html>

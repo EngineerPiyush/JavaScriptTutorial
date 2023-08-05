@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div id="main">
+            <h1 id="title">Hello World</h1>
+        </div>
+        <script>
+//unlike innerHTML if you want to insert the html into the document without replacing the existing contentof an html elment
+//you should use insertAdjcentHTML() method.
+//it can be insert at the position 1: beforebegin 2: afterbegin 3: beforeend 4: afterend   
+        var mainDiv=document.getElementById("main");
+        mainDiv.insertAdjacentHTML("beforebegin",'<p>love you janeman</p>');
+        mainDiv.insertAdjacentHTML('afterbegin',"<p>jiyab naahi tohra bina ye hamar rani</p>");
+        mainDiv.insertAdjacentHTML("beforeend","<p>humke chikhada aapan chikkan jawani</p>");
+        mainDiv.insertAdjacentHTML('afterend','<p>i miss you really babu</p>');
+//when inserting HTML into a page be careful not to use user input that has not been 
+//escaped , to prevent XSS attack.
+//the before begin and after end will only work if DOM tree node has a parent element
+        </script>
+    </body>
+</html>

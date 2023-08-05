@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div id="main">
+            <h1 id="title" style="color:aqua">Hello World</h1>
+            <p id="hint" style="color:blue">this is a simple paragraph</p>
+            <button onclick="myfunc()" style="border-radius: 5px; color:blueviolet">clickMe</button>
+        </div>
+        <script>
+            //it is also possible to remove child element without knowing the parent element
+            //use parentNode property to find patrent first then remove the element
+            function myfunc(){
+                var childElem=document.getElementById("hint");
+                childElem.parentNode.removeChild(childElem);
+            }
+        </script>
+    </body>
+</html>

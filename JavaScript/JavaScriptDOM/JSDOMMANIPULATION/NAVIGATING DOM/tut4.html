@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div id="main">
+            <h1> this is heading</h1>
+            <p> this is a paragraph</p>
+            <this>this is <this>(just i am checking) tag( who does not exist )in html.</this>
+        </div>
+        <script>
+           var main=document.getElementById("main");
+           if(main.hasChildNodes())
+           {
+            var elemNodes=main.children;
+            for(var i=0;i<elemNodes.length;i++)
+            {
+                alert(elemNodes[i].nodeName);
+            }
+           }
+        </script>
+    </body>
+</html>

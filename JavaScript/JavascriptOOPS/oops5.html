@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            //Overriding in javascript
+            class Employee
+            {
+               
+               login()
+                {
+                    console.log(`Employee has log in`);
+                }
+                logout()
+                {
+                    console.log(`employee has log out`);
+                }
+                requestleaves(leaves)
+                {
+                    console.log(`employee has requested ${leaves} leaves`);
+                } 
+            }
+            class programmer extends Employee
+            {
+                requestCoffee(x)
+                {
+                    console.log(`employee has requested ${x} coffees`);
+                }
+                 requestleaves(leaves)
+                {
+                    console.log(`employee has requested ${leaves+2} leaves (two exra)`);
+                } 
+            }
+                let e=new programmer();
+                e.login();
+                e.requestleaves(3);
+                e.requestCoffee(2);
+                e.logout();
+        </script>
+    </body>
+</html>

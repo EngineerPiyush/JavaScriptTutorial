@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .heighlight{
+                background:yellowgreen;
+            }
+            .visible{
+                color:red;
+            }
+        </style>
+    </head>
+    <body>
+            <div id="info" class="disabled">something very important</div>
+        <script>
+        //there is even a better way to work with css clases we can use classList prpoperty to get, set or remove css classes
+            var elem=document.getElementById("info");
+            elem.classList.add("hide");//add a new class
+            elem.classList.add("note","heighlight","disabled");//add multiple classes
+            elem.classList.remove("hide");
+            elem.classList.remove("disabled","note");//removing multiple classes
+            elem.classList.toggle("visible");//if class exixt remove it if not add it.
+          //Determining if a class exist.
+            if(elem.classList.contains("heighlight")){
+                alert("heighlight class exist on the element");
+            }
+            if(elem.classList.contains("disabled")){
+                alert("disabled class exist on the element");
+            }
+        </script>
+    </body>
+</html>

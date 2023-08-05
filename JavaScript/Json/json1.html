@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var jsonobject={
+        //     "firstname":"Piyush",
+        //     "lastname":"Dubey",
+        //     "age":24
+        // }
+        // // document.write(jsonobject.firstname);
+
+        // //modify value
+        // jsonobject.firstname='divyanshu'
+        // jsonobject.age='18'
+        // jsonobject.profession='upcoming engineer'
+        // delete jsonobject.age;
+        // for(showdata in jsonobject){
+        //     document.write(jsonobject[showdata]+"<br>")
+        // }
+        // var jsonobject={
+        //     "array":["Piyush","Dubey","SirJee"]
+        // }
+        // document.write(jsonobject.array)
+        var jsonobject={
+            "FIFA":[
+                {
+                    "countryname":'brazil',
+                    "bestplayer":'Neymar'
+                },
+                {
+                    'countryname':'Purtgaal',
+                    'bestplayer':'Ronaldo'
+                },
+                {
+                    'countryname':'Argentina',
+                    'bestplayer':'Messi'
+                }
+            ]
+        }
+        document.write(jsonobject.FIFA[2].countryname+"<br>")
+        document.write(jsonobject.FIFA[2].bestplayer+'<br>')
+        document.write('------------------------------'+"<br>")        
+        for(x in jsonobject.FIFA){
+            // document.write(x)
+            for(inner_x in jsonobject.FIFA[x])
+            {
+                document.write(jsonobject.FIFA[x][inner_x]+"<br>")
+            }
+        }
+    </script>    
+</body>
+</html>

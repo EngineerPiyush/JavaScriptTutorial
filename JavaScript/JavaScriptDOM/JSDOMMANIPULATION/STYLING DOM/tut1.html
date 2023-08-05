@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p id="intro">this is intro</p>
+        <p>this is another paragraph</p>
+        <script>
+        //setting inline css on element by style attribute 
+            var elem=document.getElementById("intro");
+            elem.style.color="green";
+            elem.style.fontSize="30px";
+            elem.style.fontWeight="bold";
+        //getting style infoemation from html
+            var info=document.getElementById("intro");
+            alert(info.style.color);
+            alert(info.style.fontSize);
+            alert(info.style.fontWeight);s
+        </script>
+    </body>
+</html>

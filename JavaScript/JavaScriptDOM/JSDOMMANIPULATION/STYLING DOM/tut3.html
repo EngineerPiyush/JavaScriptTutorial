@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <style>
+        .heighlight{
+            background:yellowgreen;
+        }
+        .note{
+            color:blue;
+        }
+    </style>
+    </head>
+    <body>
+        <div id="info" class="disabled">something very important</div>
+
+        <script>
+            // adding css classes to html using className property (because class is a reserve word in javascript so 
+            //can not use class keyword only) . 
+            var elem=document.getElementById("info");
+            elem.className="note";//add or replace all classes with note class
+            elem.className+=" heighlight"; //add a new class heighlight
+        </script>
+    </body>
+</html>

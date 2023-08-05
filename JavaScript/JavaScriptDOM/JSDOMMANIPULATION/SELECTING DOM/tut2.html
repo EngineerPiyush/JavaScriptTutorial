@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p id="mark">This is a paragraph of text</p>
+        <p class="test">this is another paragraph of text</p>
+        <div class="block test">This is text in div tag</div>
+        <script>
+            //2: selecting the elements by id 
+            var match=document.getElementById("mark");// match will recieve the element as an object if id not match 
+            //with any element getElementById method return null.
+            match.style.background="red";
+            //3: selecting elements by class name
+            var matches=document.getElementsByClassName("test");
+            //generally getElementsByClassName method returns an object of all child element which have all of the given class names
+            document.write("number of selected elements: "+matches.length);
+            matches[0].style.fontWeight="bold";
+            matches[matches.length-1].style.fontStyle="italic";
+            for(var elem in matches){
+                matches[elem].style.background="yellow";
+            }
+        </script>
+    </body>
+</html>

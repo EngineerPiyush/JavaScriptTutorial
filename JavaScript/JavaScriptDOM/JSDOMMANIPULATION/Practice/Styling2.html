@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JS Get Element's Style Demo
+        </title>
+    </head>
+    <body>
+        <p id="intro" style="color:green; font-size:20px;">this is the paragraph</p>
+        <p>this is another paragraph</p>
+        <script>
+            var element=document.getElmentById("intro");
+            //getting style information from element
+            document.write(element.style.color);
+            document.write(element.style.fontSize);
+            document.write(element.style.fontStyle);
+        </script>
+    </body>
+</html>

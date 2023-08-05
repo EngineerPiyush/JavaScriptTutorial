@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        // let a=23;//Number Type
+        // console.log('the value of a is',a);
+        // console.log('type of a is',typeof(a));
+        // a='Piyush'
+        // console.log('type of a is',typeof(a));
+        // a=false;
+        // console.log('type of a is',typeof(a));
+
+        // type conversion in javascript
+        // Number()
+        // String()
+        // Boolean()
+
+        let a=23;
+        console.log('type of a is',typeof(a));
+        a=String(a);
+        console.log('type of a is',typeof(a));
+        Boolean(a);
+        console.log('type of a is',typeof(a));
+        a=Boolean(a)
+        console.log('type of a is',typeof(a));
+        // In javascript undefined,null,0,NaN,"converts to false.
+        // All other values gives true
+        a="";
+        a=Boolean(a);
+        console.log(a);
+        a=undefined;
+        a=Boolean(a);
+        console.log(a);
+        a=null;
+        a=Boolean(a);
+        console.log(a);
+        a=0;
+        a=Boolean(a);
+        console.log(a);
+        a=NaN;
+        a=Boolean(a);
+        console.log(a);
+        a='Piyush';
+        a=Boolean(a);
+        console.log(a);
+
+        let b='hello';
+        b=Number(b);
+        console.log(b);
+        b=null;
+        b=Number(b)
+        console.log(b);
+        b=undefined;
+        b=Number(b)
+        console.log(b);
+        b="";
+        b=Number(b);
+        console.log(b);
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <body>
+    <button type="button" onclick="loadFacebookPage()">Load Home Page</button>
+    <button onclick="CantGoBack()">NeverBack</button>
+        <script>
+            //Loading new documents
+            //we can use assign() method of the location object window.location.assign()
+            //to load another resource 
+            function loadFacebookPage(){
+                window.location.assign("https://www.facebook.com");
+            }
+            //we also use the replace() method to load new document which is the almost same as 
+            //the same as asign(). the difference is that it does not create entry in the browser history
+            //means the user wont be able to use  the back button to navigate to it.
+            function CantGoBack(){
+            window.location.replace("https://www.instagram.com");
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding css classes to element </title>
+ <style type="text/css">
+     .addclass{
+         background-color:yellow;
+     }
+     .oldClass{
+         background-color:red;
+     }
+ </style>
+ </head>
+ <body>
+    <div id="intro" class="oldClass" style="color:red; font-size:30px;">this is paragraph</div>
+    <script>
+        var elem=document.getElementById("intro");
+        elem.className="replace";//replacing all classes with replace name
+        elem.className+="addclass";//Adding a new class highlight
+    </script>
+</body>
+</html>

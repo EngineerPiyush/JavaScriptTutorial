@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            //Reloading the Page Dynamically
+            //the reload method is used to reload the current page dynamically
+            //you can specify a boolean parameter if it's true then method will foce browswer 
+            //to load page from server if false then or not specified boolean parameter
+            //then browser may relode the page from its cache.
+            function forceReload(){
+                window.location.reload(true);
+            }
+        </script>
+        <button type="button" onclick="forceReload()">forceReloadThisPage</button>
+    </body>
+</html>

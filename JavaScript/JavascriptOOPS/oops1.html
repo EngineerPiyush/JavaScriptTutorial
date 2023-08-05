@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <body>
+<script>
+    //classes in javascript
+class RailwayForm{
+    submit()
+    {
+        alert(this.name+": your form is submitted for tarin number "+ this.trainNo);
+    }
+    cancel()
+    {
+        alert(this.name +" :your from is cancelled for tain number "+this.trainNo);
+    }
+    fill (givenname,trainNo){
+        this.name=givenname;
+        this.trainNo=trainNo;
+    }
+}
+let piyushForm=new RailwayForm();
+piyushForm.fill("piyush",15050);
+piyushForm.submit();
+let saurabhForm1=new RailwayForm();
+saurabhForm1.fill("saurabh",14050);
+saurabhForm1.submit();
+saurabhForm2=new RailwayForm();
+saurabhForm2.fill("saurabh",13050)
+saurabhForm1.cancel();
+saurabhForm2.submit();
+</script>
+</body>
+</html>

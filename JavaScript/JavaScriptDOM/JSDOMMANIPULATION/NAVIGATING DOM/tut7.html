@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div id="main">
+            <h1 id="headi">hey there i am too big!</h1>
+            <p id="para">hey there i am too small?</p>
+            <p>i am a simple men</p>
+        </div>
+        <script>
+        //you can use previousElementSibling and nextElementSibling to get the previous and next sibling
+        //element skipping any white space text nodes.it returns null if there is no such sibling.
+        var main=document.getElementById("main");
+        var para=document.getElementById("para");
+        alert(para.previousElementSibling.nodeName);
+        alert(para.nextElementSibling.nodeName);
+        alert(main.nextElementSibling.nodeName);
+        document.write(main.nextElementSibling.textContent);
+        //textContent property shows thee text inside of specified element(tag or node).
+        document.write("<br>"+main.nodeType);
+        document.write("<br>"+document.documentElement.nodeType);
+        //you should learn about nodeType property in javascript
+        </script>
+    </body>
+</html>

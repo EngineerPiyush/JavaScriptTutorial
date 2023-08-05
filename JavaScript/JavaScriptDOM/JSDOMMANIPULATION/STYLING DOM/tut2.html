@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        #intro{
+            font-weight:bold;
+            font-style:italic;
+        }
+        </style>
+    </head>
+    <body>
+    <p id="intro" style="color:red; font-size:20px;">this is  paragraph</p>
+        <p>this is another paragraph</p>
+        <script>
+    //the style property returns only inline style but what if i want to get info about the style applied on element
+    //from outside like externel css sheet or embedded styles int hat case we will use getComputedStyle method.
+        var elem=document.getElementById("intro");
+        var styles=window.getComputedStyle(elem);
+        alert(styles.getPropertyValue("color"));
+        alert(styles.getPropertyValue("font-weight"));
+        alert(styles.getPropertyValue("font-style"));
+        alert(styles.getPropertyValue("font-size"));
+        </script>
+    </body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <body>
+    <div id="main">
+        <h1>this is heading</h1>
+        <p id="hint">this is <span>paragraph</span></p>
+    </div>
+        <script>
+            var hint=document.getElementById("hint");
+            alert(hint.parentNode.nodeName);
+            alert(document.documentElement.parentNode.nodeName);
+            alert(document.parentNode);
+            //how ever if you want only element node (do not want #document #text etc) you
+            //can use parentElement .
+            var main=document.getElementById("main");
+            alert(main.parentElement.nodeName);
+            alert(document.parentElement.nodeName);
+        </script>
+    </body>
+</html>

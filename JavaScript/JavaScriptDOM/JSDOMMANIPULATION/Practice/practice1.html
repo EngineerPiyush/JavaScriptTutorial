@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding New Elements to DOM</title>
+</head>
+<body>
+<div id="main" >
+    <h3>hello brother kaise aana hua</h3>
+       <p >this is paragraph</p>
+   </div> 
+   <script>
+       var newDiv=document.createElement("div");
+        var newContent=document.createTextNode("Acha,haal chaal batawo");
+        newDiv.appendChild(newContent);
+        //document.body.appendChild(newDiv);
+          var currentDiv =document.getElementById("main");
+        document.body.appendChild(newDiv,currentDiv);
+  
+  //if you want to add the new element at the beginning of 
+  //any other children you can use the
+  // insertBefore() method
+  document.body.insertBefore(newDiv,currentDiv);//comment this to view privious effect
+  </script>
+</body>
+</html>

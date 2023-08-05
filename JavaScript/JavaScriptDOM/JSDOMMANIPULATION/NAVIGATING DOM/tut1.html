@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div id="main">
+            <h1 id="title">My heading</h1>
+            <p id="hint"><span>This is some text</span></p>
+                </div>
+        <script>
+            var main=document.getElementById("main");
+            //we can use the firstChild and lastChild property to find first ad last child Node.
+            document.write(main.firstChild.nodeName+"<br>");
+            var hint =document.getElementById("hint");
+            document.write(hint.firstChild.nodeName);
+//Note: in the first example you have found output # text on screen instead of h1 because white space
+//such as spaces , tabs ,newline etc are valid characters and they form node also called #text and
+//become a part of the DOM tree. So the div atg containing a new line before h1 so firstChild is #text.
+            document.write("<br>"+main.lastChild.nodeName);
+       </script>
+    </body>
+</html>

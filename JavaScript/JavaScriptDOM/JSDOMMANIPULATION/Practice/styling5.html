@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript classList property</title>
+</head>
+<body>
+    <div id="info" class="dismis">Its very Important man</div>
+<script>
+    var cont=document.getElementById("info");
+cont.classList.add("hide");//addong a new class named hide
+cont.classList.add("note","highlight");//adding multiple classes
+cont.classList.remove("hide","note");//removing class named hide and note
+cont.classList.toggle("visible")//if class already exixt remove it if not add it.
+
+if(cont.classList.contains("highlight"))
+{
+    alert("this class exist on the element");
+}
+else{
+    alert("class does not exist");
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #btn{
+                border-radius: 5px;
+                color:blue;
+                background-color: brown;
+                font-weight:700;
+            }
+            #title{
+                color:aqua;
+            }
+            #hint{
+                color:rgb(0, 255, 21)
+            }
+        </style>
+    </head>
+    <body>
+        <div id="main">
+            <h1 id="title">Hello World!</h1>
+            <p id="hint">click on the button to see new para at this place </p>
+            <button onclick="replace()" id="btn">click</button>
+            </h1>
+        </div>
+        <script>
+    //replacing exesting element in Dom
+    function replace(){        
+    var parentElem=document.getElementById("main");
+            var oldPara=document.getElementById("hint");
+            var newPara=document.createElement("p");
+            var newContent=document.createTextNode("this is a newly paragraph");
+            newPara.appendChild(newContent);
+            parentElem.replaceChild(newPara,oldPara);
+    }
+        </script>
+    </body>
+</html>

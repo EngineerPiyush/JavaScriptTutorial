@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting innner html content</title>
+</head>
+<body>
+<div id="main">
+    <h4>this is a heading</h4>
+    <p>this is a paragraph</p>
+</div>
+<button type="button" onclick="get()">Get</button>
+<button type="button" onclick="Set()">Set</button>
+<script>
+    function get()
+    {
+        var getv=document.getElementById("main").innerHTML;
+    alert(getv);
+    }
+    function Set()
+    {
+        var setv=document.getElementById("main");
+        setv.innerHTML="<p>this is <em> new </em> paragraph.</p>";
+    }
+</script>
+</body>
+</html>

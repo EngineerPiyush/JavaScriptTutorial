@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            //method overriding in constructor
+              class Employee
+            {
+                constructor(name)
+                {
+                  console.log(`hii ${name} is on the time`);  
+                }
+               
+               login()
+                {
+                    console.log(`Employee has log in`);
+                }
+                logout()
+                {
+                    console.log(`employee has log out`);
+                }
+            }
+            class programmer extends Employee
+            {
+                constructor(){
+                    console.log("hii i am base class constructor ");
+                    //one more thing please note  here that we should always use this keyword after super 
+                    super("piyush");
+                    this.name;//if i use before super this keyword it will through a error.
+                }
+                requestCoffee(x)
+                {
+                    console.log(`employee has requested ${x} coffees`);
+                    
+                }
+        }
+                let e=new programmer();
+                e.login();
+
+        </script>
+    </body>
+</html>

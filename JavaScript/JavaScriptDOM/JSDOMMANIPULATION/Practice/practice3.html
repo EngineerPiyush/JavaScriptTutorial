@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript insertAdjsentHTML Method</title>
+</head>
+<body>
+    <!--before Begin-->
+    <div id="main">
+        <!--After Begin-->
+        <p>Hi this original paragraph</p>
+    <!--Before End-->
+    </div>
+    <!--After End-->
+
+    <button type="button" onclick="fun1()" >BeforeBegin</button>
+    <button type="button" onclick="fun2()" >AfterBegin</button>
+    <button type="button" onclick="fun3()" >BeforeEnd</button>
+    <button type="button" onclick="fun4()" >AfterEnd</button>
+    <script>
+        var getv=document.getElementById("main");
+       function fun1(){
+        getv.insertAdjacentHTML('beforebegin','<p styLe="color:green;">Before div hai ye paragraph</p>');
+        }
+       function fun2(){
+        getv.insertAdjacentHTML("afterbegin",'<p style="color:red;">After Div element -- paragraph</p>');
+        }
+       function fun3(){
+        getv.insertAdjacentHTML("beforeend",'<p style="color:yellow;">Before End of Div Element-- Paragraph</p>');
+        }
+        function fun4(){
+            getv.insertAdjacentHTML("afterend",'<p style="color:blue;">After end Div Tag Para </p>');
+        }
+            </script>
+</body>
+</html>

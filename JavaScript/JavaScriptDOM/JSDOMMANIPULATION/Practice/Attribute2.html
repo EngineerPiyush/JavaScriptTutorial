@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setting Attributes on Elements</title>
+    <style>
+        .click-btn{
+            background-color:#2be253;
+        }
+    </style>
+</head>
+<body>
+<button type="button" id="myBtn">Click Me</button>
+  <a href="#" id="mylink">Tutorial Republic</a>
+<script>
+    // Selecting the element
+    var btn = document.getElementById("myBtn");
+	
+    // Setting new attributes
+    btn.setAttribute("class", "click-btn");
+    btn.setAttribute("disabled", "");
+    //we can update or change the values also
+    var link=document.getElementById("mylink");
+    link.setAttribute("href","www.instagram.com");
+    link.removeAttribute("href");
+</script>
+</body>
+</html>

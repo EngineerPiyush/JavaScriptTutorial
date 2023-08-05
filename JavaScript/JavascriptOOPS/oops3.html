@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            //Inheritence in javascript
+            class Animal{
+                constructor(name,color){
+                    this.name=name;
+                    this.color=color;
+                }
+                shout()
+                {
+                    console.log(this.name+" is shouting");
+                }
+                eat(thing)
+                {
+                    console.log(this.name+" is eating "+thing);
+                }
+            }
+            class Monkey extends Animal{
+                jump()
+                {
+                    console.log(this.name+" is jumping");
+                }  
+            }
+            class Dog extends Animal{
+               run()
+               {
+                   console.log(this.name+" is running");
+               }
+            }
+       let monkey=new Monkey("chimpoo","red");
+       let dog=new Dog("Tommy","black");
+        </script>
+    </body> 
+</html>

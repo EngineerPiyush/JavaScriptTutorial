@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Adding Event Listeners for Different Event Types -->
+
+    <button id="myBtn">Click Me</button>
+
+    <!-- Adding Event Listeners to Window Object -->
+    <div id="result"></div>
+    <script>
+        var btn = document.getElementById("myBtn");
+ 
+// Defining custom functions
+function sayHello() {
+    alert("Hi, how are you doing?");
+}
+ 
+function setHoverColor() {
+    btn.style.background = "yellow";
+}
+ 
+function setNormalColor() {
+    btn.style.background = "";
+}
+ 
+// Assigning event listeners to the button
+btn.addEventListener("click", sayHello);
+btn.addEventListener("mouseover", setHoverColor);
+btn.addEventListener("mouseout", setNormalColor);
+
+
+// Adding Event Listeners to Window Object
+
+// Defining event listener function
+function displayWindowSize() {
+    var w = window.innerWidth;
+    var h = window.innerHeight;
+    var size = "Width: " + w + ", " + "Height: " + h;
+    document.getElementById("result").innerHTML = size;
+}
+ 
+// Attaching the event listener function to window's resize event
+window.addEventListener("resize", displayWindowSize);
+
+// Removing Event Listeners
+    </script>
+</body>
+</html>

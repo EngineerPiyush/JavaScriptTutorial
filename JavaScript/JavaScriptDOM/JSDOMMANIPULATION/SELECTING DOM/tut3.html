@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p>this is paragraph of text</p>
+        <div class="test">this is a text inside div element</div>
+        <p>this is one more paragraph of text</p>
+        <script>
+            // 4: selecting elements by tag name
+            var matches=document.getElementsByTagName("p");
+            //getElementsByTagName method returns object of all child elements with the given tag name
+            document.write("number of selected elements: "+matches.length);
+            for(var elem in matches)
+            {
+                matches[elem].style.background="yellow"
+            }           
+        </script>
+    </body>
+</html>

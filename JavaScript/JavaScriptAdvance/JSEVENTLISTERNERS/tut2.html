@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- js event listeners -->
+    <button id="myBtn">Click Me</button>
+    <button id="myButton">Click Bro</button>
+    <script>
+        // Defining custom functions
+        function firstFunction() {
+            alert("The first function executed successfully!");
+        }
+
+        function secondFunction() {
+            alert("The second function executed successfully");
+        }
+
+        // Selecting button element
+        var btn = document.getElementById("myBtn");
+        // Assigning event handlers to the button
+        btn.onclick = firstFunction;
+        btn.onclick = secondFunction; // This one overwrite the first
+        // If you run the above example and click the button element, only secondFunction() will be executed, because assigning the second event handler overwrites the first.
+        // This is the main shortcoming of this classic event model—you can only assign one event handler to a particular event on a particular element i.e.a single function per event per element.To deal with this problem W3C introduced more flexible event - model called event listeners.
+        // Any HTML element can have multiple event listeners, therefore you can assign multiple functions to the same event for the same element, as demonstrated in following example:   
+
+        // Defining custom functions
+        function firstFunction() {
+            alert("The first function executed successfully!");
+        }
+
+        function secondFunction() {
+            alert("The second function executed successfully");
+        }
+
+        // Selecting button element
+        var btn = document.getElementById("myButton");
+        // Assigning event listeners to the button
+        btn.addEventListener("click", firstFunction);
+        btn.addEventListener("click", secondFunction);
+// In addition to the event type and listener function parameter the addEventListener() accepts one more Boolean parameter useCapture.This is an optional parameter which specifies whether to use event bubbling or event capturing.Its basic syntax is:
+// target.addEventListener(event, function, useCapture);
+    </script>
+</body>
+
+</html>

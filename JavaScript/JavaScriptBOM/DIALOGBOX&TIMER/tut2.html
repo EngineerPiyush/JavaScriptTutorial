@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Both setTimeout() and setInterval() method return an unique ID (a positive integer value, called timer identifier)
+    which identifies the timer created by the these methods.
+
+    This ID can be used to disable or clear the timer and stop the execution of code beforehand. Clearing a timer can be
+    done using two functions: clearTimeout() and clearInterval(). -->
+
+    <!-- The setTimeout() function takes a single parameter, an ID, and clear a setTimeout() timer associated with that ID,
+    as demonstrated in the following example: -->
+
+    <button onclick="clearTimeout(cancelId)">Cancel Execution</button>
+    <button onclick="delayAlert()">Start Execution</button>
+
+    <p id="clock"></p>
+    <button onclick="stopClock()">stopClock</button>
+    <script>
+        var cancelId;
+        function chlawo() {
+            alert('bhai settime out chal gaya');
+        }
+
+        function delayAlert() {
+            cancelId = setTimeout(chlawo, 5000);
+        }
+
+
+        var intervalID;
+        function showTime() {
+            var d = new Date();
+            document.getElementById("clock").innerHTML = d.toLocaleTimeString();
+        }
+
+        function stopClock() {
+            clearInterval(intervalID);
+        }
+
+        var intervalID = setInterval(showTime, 1000);
+
+    //  You can technically use clearTimeout() and clearInterval() interchangeably.However, 
+    // for clarity and code maintainability you should avoid doing so.
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <style>
+            .democlass{
+                color:blue;
+            }
+            .demo{
+                color:brown;
+            }
+        </style>
+    <body>
+        <h1>Hi</h1>
+        <p>click on the change button to get the peroperty and see the changed result </p>
+        <button onclick="myFunction()">CHANGE</button>
+        <script>
+           function myFunction(){
+            const attr=document.createAttribute("class");
+         attr.value="democlass";
+         const element=document.getElementsByTagName("h1")[0];
+         element.setAttributeNode(attr);
+         //The setAttributeNode() method adds an attribute node to an element.
+         //The setAttributeNode() method replaces existing attribute nodes.
+         //The setAttributeNode() method returns an Attribute object. so thats why we have not given the attribute and value together
+        } 
+    </script>
+  </body>
+</html>

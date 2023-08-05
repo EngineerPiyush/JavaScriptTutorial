@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- You can create three different types of dialog boxes alert, confirm, and prompt boxes.
+
+The appearance of these dialog boxes is determined by the operating system and/or browser settings, they cannot be modified with the CSS. Also, dialog boxes are modal windows; when a dialog box is displayed the code execution stops, and resumes only after it has been dismissed.
+
+In the following section we will discuss each of these dialog boxes in detail. -->
+
+    <!-- An alert dialog box is the most simple dialog box. It enables you to display a short message to the user. It also includes OK button, and the user has to click this OK button to continue. -->
+
+    <!-- A confirm dialog box allows user to confirm or cancel an action. A confirm dialog looks similar to an alert dialog
+    but it includes a Cancel button along with the OK button.
+
+    You can create confirm dialog boxes with the confirm() method. This method simply returns a Boolean value (true or
+    false) depending on whether the user clicks OK or Cancel button. That's why its result is often assigned to a
+    variable when it is used. -->
+
+
+    <!-- The prompt dialog box is used to prompt the user to enter information. A prompt dialog box includes a text input
+    field, an OK and a Cancel button.
+
+    You can create prompt dialog boxes with the prompt() method. This method returns the text entered in the input field
+    when the user clicks the OK button, and null if user clicks the Cancel button. If the user clicks OK button without
+    entering any text, an empty string is returned -->
+    <!-- The value returned by the prompt() method is always a string. -->
+    <!-- Therefore, if you want to use the returned value as a number you must covert it or cast to Number, like this: var
+    age = Number(prompt("What's your age?")); -->
+    <script>
+        // alert() method
+        var message = "Hi there! Click OK to continue.";
+        alert(message);
+        /* The following line won't execute until you dismiss previous alert */
+        alert("This is another alert box.");
+
+// conform() method
+        var result = confirm("Are you sure?");
+        if (result) {
+            document.write("You clicked OK button!");
+        } else {
+            document.write("You clicked Cancel button!");
+        }
+
+
+// prompt() method
+var name = prompt("What's your name?");
+if(name.length > 0 && name != "null") {
+    document.write("<br>Hi, " + name);
+} else {
+    document.write("<br>Anonymous!");
+}
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            // super keyword in javascript
+                class Employee
+            {
+                login()
+                {
+                    console.log(`Employee has log in`);
+                }
+                 logout()
+                {
+                    console.log(`employee has log out`);
+                }
+                requestleaves(leaves)
+                {
+                    console.log(`employee has requested ${leaves} leaves`);
+                } 
+            }
+             class programmer extends Employee
+            {
+                requestCoffee(x)
+                {
+                    console.log(`employee has requested ${x} coffees`);
+                }
+                 requestleaves(leaves)
+                {
+                    console.log(`employee has requested ${leaves} leaves (two exra)`);
+                    super.requestleaves(3);
+                    console.log("But i have provided two extra wow do my project timely then.")
+                }
+                } 
+                let e=new programmer();
+                e.login();
+                e.requestleaves(3);
+                e.requestCoffee(2);
+                e.logout();
+                </script>
+    </body> 
+</html>

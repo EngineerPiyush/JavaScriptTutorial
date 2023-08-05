@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            //static method in javascript
+            //we can call the static  method by class name without creating an object
+            class Animal{
+                constructor(name){
+                    this.name=Animal.capitalize(name);
+                }
+                walk()
+                {
+                    alert("Animal "+this.name +" is walking");
+                }
+                static capitalize(name)
+                {
+                    return name.charAt(0).toUpperCase()+ name.substr(1,name.length);
+                }
+            }
+            let a=new Animal("monkey");
+            a.walk();
+            a=new Animal(Animal.capitalize("dog"));
+            a.walk();
+           // a.capitalize("dog");-- not allowed beacuse of static method 
+        </script>
+    </body>
+</html>
